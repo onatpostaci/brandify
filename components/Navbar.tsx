@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, MouseEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CustomButton, LoginModal } from ".";
@@ -16,12 +16,11 @@ const Navbar = () => {
     setOpen(false);
   };
 
-  const handleOverlayClick = (e) => {
-    if (modalRef.current && !modalRef.current.contains(e.target)) {
+  const handleOverlayClick = (e: MouseEvent) => {
+    if (modalRef.current && modalRef.current.contains(e.target as Node)) {
       handleModalClose();
     }
   };
-
   const modalRef = useRef(null);
   return (
     <>
