@@ -11,7 +11,6 @@ const Hero = () => {
     <motion.div
       initial={{ opacity: 0, x: 15 }}
       animate={{ opacity: 1, x: 0 }}
-      exist={{ opacity: 0, x: 15 }}
       transition={{ delay: 0.25 }}
       className="hero"
     >

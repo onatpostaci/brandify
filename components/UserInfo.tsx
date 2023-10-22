@@ -11,7 +11,7 @@ const UserInfo = () => {
     return (
       <div className="flex items-center gap-5 p-4 cursor-pointer hover:bg-light-white rounded-md">
         <Image
-          src={session?.user?.image}
+          src={session?.user?.image || ""}
           alt={"User Image"}
           width={40}
           height={40}
