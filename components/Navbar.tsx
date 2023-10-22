@@ -21,7 +21,7 @@ const Navbar = () => {
       handleModalClose();
     }
   };
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDivElement | null>(null);
   return (
     <>
       <header className="w-full absolute z-10">
