@@ -219,7 +219,6 @@
 .messaging__platform {
   @apply flex-col py-6 h-[80%] w-full bg-[#F5F4F6] overflow-y-auto;
 }
-/* END: Messaging Platform styles */
 
 /* width */
 ::-webkit-scrollbar {
@@ -241,3 +240,13 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* END: Messaging Platform styles */
+
+/* START: FAQ Panel styles */
+
+.accordion {
+  @apply flex flex-col items-center justify-center w-full px-2 text-lg pt-4 lg:text-base;
+}
+
+/* END: FAQ Panel styles */

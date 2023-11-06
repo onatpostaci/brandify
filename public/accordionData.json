@@ -1,0 +1,27 @@
+[
+  {
+    "idx": 1,
+    "question": "How does the GPT-Powered web application work?",
+    "answer": "Brandify uses the OpenAI API and GPT technology to generate customized branding snippets and keywords based on the user's input. You provide a prompt, and our AI model generates relevant content, making it easy for you to create branding materials."
+  },
+  {
+    "idx": 2,
+    "question": "Is my data safe when using the application?",
+    "answer": "Yes, we take data privacy seriously. We don't store user data, and our backend system is designed with security in mind. Your inputs and generated content are processed and discarded without being retained."
+  },
+  {
+    "idx": 3,
+    "question": "Can I integrate this service into my own applications or products?",
+    "answer": "Absolutely! Our service is accessible via API, allowing you to integrate it into your own applications or products. Contact us for API access and documentation."
+  },
+  {
+    "idx": 4,
+    "question": "How do I deploy the application on my own infrastructure?",
+    "answer": "We provide a Dockerized version of the backend using FastAPI, and it can be deployed on your infrastructure. You can also follow our AWS Lambda deployment guide. Contact our support for assistance."
+  },
+  {
+    "idx": 5,
+    "question": "What technologies were used for the front-end and hosting?",
+    "answer": "The front-end of our web application is built using React, Next.js, and Tailwind CSS for a smooth user experience. We host our front-end on Vercel, a platform for serverless deployment, ensuring fast and reliable access to our application."
+  }
+]

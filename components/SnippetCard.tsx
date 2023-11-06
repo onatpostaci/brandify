@@ -3,7 +3,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { SnippetProps } from "@/types";
 
-const SnippetCard = ({ prompt, snippet, keywords }: SnippetProps) => {
+const SnippetCard = ({
+  prompt,
+  snippet,
+  imageSource,
+  keywords,
+}: SnippetProps) => {
   return (
     <div className="car-card group">
       <div className="car-card__content">
@@ -11,14 +16,14 @@ const SnippetCard = ({ prompt, snippet, keywords }: SnippetProps) => {
       </div>
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src={"/brandify.svg"}
+          src={imageSource}
           alt="car model"
           fill
           priority
           className="object-contain"
         />
       </div>
-      <p className="flex mt-6 text-[25px] leading-[38px] font-extrabold">
+      <p className="flex mt-6 text-[15px] leading-[38px] font-extrabold">
         {snippet}
       </p>
     </div>

@@ -17,21 +17,29 @@ const Discover = () => {
           transition={{ delay: 0.25 }}
           className="home__cars-wrapper"
         >
-          <SnippetCard prompt="Coffee" snippet="Cofee is good!" keywords="" />
+          <SnippetCard
+            prompt="Coffee"
+            snippet="Enjoy the best cup of coffee you've ever had!"
+            imageSource="/coffee.jpeg"
+            keywords=""
+          />
           <SnippetCard
             prompt="Car Rental"
-            snippet="Cofee is good!"
+            snippet="Looking for a fun and affordable way to get around town? Try car rental!"
+            imageSource="/car-rental.jpg"
             keywords=""
           />
 
           <SnippetCard
             prompt="Security Systems"
-            snippet="Cofee is good!"
+            snippet="Here at Security Systems, we're passionate about keeping your home and family safe."
+            imageSource="/security-service.jpg"
             keywords=""
           />
           <SnippetCard
             prompt="Agile Coaching"
-            snippet="Cofee is good!"
+            snippet="Agile Coaching is the perfect place to find the tools and resources you need to succeed with agile."
+            imageSource="/agile-coach.jpg"
             keywords=""
           />
         </motion.div>

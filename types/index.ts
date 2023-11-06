@@ -1,6 +1,12 @@
 import SnippetCard from "@/components/SnippetCard";
 import { List } from "postcss/lib/list";
-import { MouseEventHandler, RefObject, ChangeEvent } from "react";
+import {
+  MouseEventHandler,
+  RefObject,
+  ChangeEvent,
+  Dispatch,
+  SetStateAction,
+} from "react";
 
 export interface CustomButtonProps {
   title: string;
@@ -16,6 +22,7 @@ export interface PageWrapperProps {
 export interface SnippetProps {
   prompt: string;
   snippet: string;
+  imageSource: string;
   keywords: string;
 }
 
@@ -62,4 +69,12 @@ export interface MessageBoxProps {
   isAnswer: boolean;
   snippet?: string;
   keywords: [];
+}
+
+export interface AccordionProps {
+  question: string;
+  answer: string;
+  turn: boolean[];
+  setTurn: Dispatch<SetStateAction<boolean[]>>;
+  idx: number;
 }

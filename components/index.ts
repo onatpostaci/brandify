@@ -13,10 +13,12 @@ import UserInfo from "./UserInfo";
 import AvatarChip from "./AvatarChip";
 import MessageBox from "./MessageBox";
 import Loader from "./Loader";
+import FreqAskQuest from "./FreqAskQuest";
 
 export {
   Hero,
   Loader,
+  FreqAskQuest,
   UserInfo,
   MessageBox,
   AvatarChip,

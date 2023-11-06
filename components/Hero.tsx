@@ -6,7 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
   //function for handling the CustomButton click
-  const handleScroll = () => {};
+  const handleScroll = () => {
+    const nextSection = document.getElementById("discover");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <motion.div
       initial={{ opacity: 0, x: 15 }}
