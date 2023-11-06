@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="overflow-hidden">
+      <main className="flex flex-col overflow-hidden">
         <Hero />
-        <div className="padding-x padding-y max-width h-[800px]" id="discover">
+        <div className="padding-x padding-y max-width mb-[150px]" id="discover">
           <Discover />
         </div>
-        <div className="padding-x padding-y max-width" id="discover">
+        <div className="padding-x padding-y max-width">
           <FreqAskQuest />
         </div>
       </main>
