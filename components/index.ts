@@ -14,10 +14,12 @@ import AvatarChip from "./AvatarChip";
 import MessageBox from "./MessageBox";
 import Loader from "./Loader";
 import FreqAskQuest from "./FreqAskQuest";
+import Sidebar from "./Sidebar";
 
 export {
   Hero,
   Loader,
+  Sidebar,
   FreqAskQuest,
   UserInfo,
   MessageBox,

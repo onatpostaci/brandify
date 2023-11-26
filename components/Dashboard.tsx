@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, ChangeEvent } from "react";
 import Image from "next/image";
-import { CustomInput, MessageBox, SidebarItem, UserInfo } from ".";
+import { CustomInput, MessageBox, Sidebar, SidebarItem, UserInfo } from ".";
 import {
   HomeIcon,
   ChatBubbleBottomCenterIcon as ChatIcon,
@@ -15,6 +15,7 @@ const Dashboard = () => {
   const [prompt, setPrompt] = useState("");
   const [snippet, setSnippet] = useState("");
   const [keywords, setKeywords] = useState([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [messageArray, setMessageArray] = useState<NewMessage[]>([
     {
       owner: 0,
@@ -78,8 +79,13 @@ const Dashboard = () => {
     keywords,
   }: NewMessage) => {};
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   const handleSubmit = async () => {
     console.log(`Submitting: ${prompt}`);
+    setPrompt("");
 
     try {
       const response = await fetch(
@@ -110,33 +116,13 @@ const Dashboard = () => {
 
   return (
     <div className="flex">
-      <div className="sidebar">
-        <div className="sidebar__item__logo mt-6">
-          <Image
-            src={"/brandify.svg"}
-            alt={"brandify-logo"}
-            width={118}
-            height={20}
-            className="object-contain"
-          />
-        </div>
-        <ul className="pt-6">
-          {menuItems.map((menu, index) => (
-            <SidebarItem
-              key={index}
-              href={menu.href}
-              gap={false}
-              icon={menu.icon}
-              title={menu.title}
-            />
-          ))}
-        </ul>
-        <div className="flex flex-col-reverse h-full w-full">
-          <div className=" flex items-center justify-center w-full h-[30%] border-t border-gray-300">
-            <UserInfo />
-          </div>
-        </div>
-      </div>
+      <button
+        className="lg:hidden absolute top-4 left-4 z-10"
+        onClick={toggleSidebar}
+      >
+        ☰
+      </button>
+      <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <div className="flex-col w-full h-screen">
         <div className="messaging__platform">
           {messageArray.map((message, index) => (
@@ -151,10 +137,11 @@ const Dashboard = () => {
           ))}
         </div>
         <div className="flex flex-col-reverse h-[20%] w-full border-b bg-[#F5F4F6] items-center">
-          <p className="mb-14 text-[15px] text-black-100 font-light">
+          <p className="mb-14 text-xs sm:text-sm text-black-100 font-light">
             Tell me what your brand is about and I will generate copy and
             keywords for you.
           </p>
+
           <CustomInput
             type={"text"}
             placeholder={"Send a brand type..."}

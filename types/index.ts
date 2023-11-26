@@ -78,3 +78,8 @@ export interface AccordionProps {
   setTurn: Dispatch<SetStateAction<boolean[]>>;
   idx: number;
 }
+
+export interface SidebarProps {
+  isSidebarOpen: boolean;
+  toggleSidebar: () => void;
+}
